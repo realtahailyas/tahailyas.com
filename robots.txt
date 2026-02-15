@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tahailyas.com/sitemap.xml
+
+# TahaIlyas.com — Meta Ads Growth Operator
