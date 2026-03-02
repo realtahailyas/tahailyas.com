@@ -1272,13 +1272,18 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 10, 0.98);
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: #0a0a0a;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    z-index: 999;
-    padding: 2rem;
+    gap: 2.5rem;
+    z-index: 9999;
+    padding: 5rem 2rem 3rem;
+    overflow-y: auto;
   }
 
   .nav__links.active {
@@ -1286,12 +1291,26 @@ p {
   }
 
   .nav__links a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+  }
+
+  .nav__links a:hover,
+  .nav__links a.active {
+    color: var(--white);
+  }
+
+  /* Book a Call button in mobile menu */
+  .nav__links .nav__cta {
+    margin-top: 0.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem !important;
   }
 
   .nav__burger {
     display: flex;
-    z-index: 1001;
+    z-index: 10000;
+    position: relative;
   }
 
   /* Sections */
