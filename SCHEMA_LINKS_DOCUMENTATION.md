@@ -74,6 +74,11 @@
     - Type: LinkedIn Pulse article
     - Purpose: Advisory content and authority building
 
+13. **Article: Why 80% of Ecommerce Stores Are Losing Sales Without an AI Chatbot**
+    - URL: `https://www.linkedin.com/pulse/why-80-ecommerce-stores-losing-sales-without-ai-chatbot-taha-ilyas-dfn0f`
+    - Type: LinkedIn Pulse article
+    - Purpose: AI chatbot thought leadership and chatbot.tahailyas.com authority signal
+
 ---
 
 ## 📰 **Medium Articles (Personal Content)**
@@ -122,6 +127,11 @@
 - **Calendly Link**: `https://calendly.com/optiviomediahq/new-meeting`
   - Used in Organization schema `contactPoint`
 
+### **SaaS Product URLs**
+- **AI Chatbot SaaS**: `https://chatbot.tahailyas.com`
+  - Used in `SoftwareApplication` schema on `index.html`
+  - Type: SaaS subscription-based chatbot for e-commerce
+
 ### **Image Assets**
 - **Profile Photo**: `https://tahailyas.com/images/taha.png`
   - Used in Person schema `image` property
@@ -131,12 +141,16 @@
 ## 📊 **Schema Distribution Summary**
 
 ### **Person Schema (Taha Ilyas)**
-- **Total sameAs links**: 14 URLs
+- **Total sameAs links**: 15 URLs
 - **Social profiles**: 3 (LinkedIn, Instagram, Facebook)
 - **Professional platforms**: 2 (Crunchbase, Medium)
-- **LinkedIn articles**: 5 (thought leadership content)
+- **LinkedIn articles**: 6 (thought leadership content)
 - **Medium articles**: 2 (long-form content)
 - **Agency cross-links**: 2 (about page, GitHub)
+
+### **SoftwareApplication Schema (chatbot.tahailyas.com)**
+- **Total schemas**: 1
+- **Type**: SoftwareApplication (SaaS, subscription model)
 
 ### **Organization Schema (Optivio Media)**
 - **Total sameAs links**: 3 URLs
@@ -187,5 +201,5 @@ All links are **live and active** as of the latest deployment. Schema markup is:
 
 ---
 
-**Last Updated**: March 11, 2026  
+**Last Updated**: March 18, 2026  
 **Site**: https://tahailyas.com | https://muhammadtaha.me/tahailyas.com/
