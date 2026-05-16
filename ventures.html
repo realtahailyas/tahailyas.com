@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ventures — Products & systems built by Taha Ilyas</title>
-  <meta name="description" content="Portfolio of AI products and growth systems by Taha Ilyas: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media, and more.">
+  <meta name="description" content="Portfolio of AI products and growth systems by Taha Ilyas: Optivio Chatbot, Optivio Automation, CertForge, Rank & Rent Portfolio, Optivio Media, and Instagram Lead Gen.">
   <meta name="author" content="Taha Ilyas">
 
   <meta property="og:title" content="Ventures — Taha Ilyas">
-  <meta property="og:description" content="Portfolio of AI products and growth systems: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media.">
+  <meta property="og:description" content="Portfolio of AI products and growth systems: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media, Rank & Rent, Instagram Lead Gen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tahailyas.com/ventures.html">
   <meta property="og:image" content="https://tahailyas.com/images/og-image.jpg">
@@ -42,8 +42,8 @@
       { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "Optivio Chatbot", "url": "https://chatbot.tahailyas.com", "applicationCategory": "BusinessApplication", "description": "AI sales assistant for e-commerce stores" } },
       { "@type": "ListItem", "position": 2, "item": { "@type": "Organization", "name": "Optivio Automation", "url": "https://optivioautomation.com", "description": "AI voice receptionists for US local service businesses" } },
       { "@type": "ListItem", "position": 3, "item": { "@type": "MobileApplication", "name": "CertForge", "applicationCategory": "EducationApplication", "operatingSystem": "Android", "description": "Certification exam prep app, starting with AWS Cloud Practitioner" } },
-      { "@type": "ListItem", "position": 4, "item": { "@type": "Organization", "name": "Optivio Media", "url": "https://optiviomedia.online", "description": "Meta Ads agency scaling e-commerce brands" } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "WebSite", "name": "Rank & Rent Portfolio", "url": "https://cedarrapidswaterdamagepro.com", "description": "Local service lead-gen sites in US markets" } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "WebSite", "name": "Rank & Rent Portfolio", "url": "https://cedarrapidswaterdamagepro.com", "description": "Local service lead-gen sites in US markets" } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "Organization", "name": "Optivio Media", "url": "https://optiviomedia.online", "description": "Meta Ads agency scaling e-commerce brands" } },
       { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "Instagram Lead Gen System", "applicationCategory": "BusinessApplication", "description": "Internal outreach automation pipeline" } }
     ]
   }
@@ -69,8 +69,8 @@
         <a href="index.html">Home</a>
         <a href="ventures.html" class="active">Ventures</a>
         <a href="about.html">About</a>
-        <a href="writing.html">Writing</a>
         <a href="work-with-me.html">Work With Me</a>
+        <a href="writing.html">Writing</a>
         <a href="contact.html" class="nav__cta">Contact</a>
       </div>
       <button class="nav__burger" aria-label="Toggle menu">
@@ -83,7 +83,7 @@
     <div class="container">
       <span class="section-label">Ventures</span>
       <h1>Everything I've built.</h1>
-      <p>Live products, growing properties, internal tools. Sorted by what I'm putting the most weight behind.</p>
+      <p>Six bets. Live products, growing properties, internal tools. Sorted by what I'm putting the most weight behind.</p>
     </div>
   </section>
 
@@ -99,7 +99,136 @@
         <button class="filter-bar__btn" data-cat="tool">Tool</button>
       </div>
 
-      <div class="venture-grid" data-ventures="all" data-src="data/ventures.json"></div>
+      <div class="venture-grid" data-static-ventures>
+
+        <!-- 1. Optivio Chatbot -->
+        <article class="venture-card fade-in" data-category="saas">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">Optivio Chatbot</h3>
+            <span class="status-badge status-badge--live">Live</span>
+          </div>
+          <div class="venture-card__tagline">AI sales assistant for e-commerce stores</div>
+          <p class="venture-card__desc">Embeddable AI chat widget that captures leads, answers product questions, and converts visitors into customers. Plans from free to $99/mo.</p>
+          <div class="stack-list">
+            <span class="stack-pill">Next.js 14</span>
+            <span class="stack-pill">Supabase</span>
+            <span class="stack-pill">OpenAI GPT-4o-mini</span>
+            <span class="stack-pill">Polar.sh</span>
+            <span class="stack-pill">Vercel</span>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">SaaS</span>
+            <a class="venture-card__link" href="https://chatbot.tahailyas.com" target="_blank" rel="noopener">Visit →</a>
+          </div>
+        </article>
+
+        <!-- 2. Optivio Automation -->
+        <article class="venture-card fade-in" data-category="agency">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">Optivio Automation</h3>
+            <span class="status-badge status-badge--live">Live</span>
+          </div>
+          <div class="venture-card__tagline">AI voice receptionists for US local service businesses</div>
+          <p class="venture-card__desc">24/7 AI phone agents for dental clinics, HVAC companies, and med spas. Books appointments, captures leads, never misses a call. Starting $500/mo.</p>
+          <div class="stack-list">
+            <span class="stack-pill">Retell AI</span>
+            <span class="stack-pill">Twilio</span>
+            <span class="stack-pill">n8n</span>
+            <span class="stack-pill">Next.js 14</span>
+            <span class="stack-pill">Brevo</span>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Agency</span>
+            <a class="venture-card__link" href="https://optivioautomation.com" target="_blank" rel="noopener">Visit →</a>
+          </div>
+        </article>
+
+        <!-- 3. CertForge -->
+        <article class="venture-card fade-in" data-category="mobile">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">CertForge</h3>
+            <span class="status-badge status-badge--launching">Launching</span>
+          </div>
+          <div class="venture-card__tagline">Smart certification exam prep, starting with AWS Cloud Practitioner</div>
+          <p class="venture-card__desc">Mobile app with intelligent weakness detection and adaptive question routing. Real readiness scoring, full mock exams, action-driven learning.</p>
+          <div class="stack-list">
+            <span class="stack-pill">React Native</span>
+            <span class="stack-pill">Expo SDK 54</span>
+            <span class="stack-pill">Supabase</span>
+            <span class="stack-pill">TypeScript</span>
+            <span class="stack-pill">AdMob</span>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Mobile</span>
+            <span class="venture-card__link venture-card__link--muted">Launching soon</span>
+          </div>
+        </article>
+
+        <!-- 4. Rank & Rent Portfolio -->
+        <article class="venture-card fade-in" data-category="web">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">Rank &amp; Rent Portfolio</h3>
+            <span class="status-badge status-badge--growing">Growing</span>
+          </div>
+          <div class="venture-card__tagline">Local service lead-gen sites in US markets</div>
+          <p class="venture-card__desc">SEO-optimized service sites ranking for high-intent local searches, monetized by renting lead flow to local businesses.</p>
+          <div class="stack-list">
+            <span class="stack-pill">Static HTML</span>
+            <span class="stack-pill">Local SEO</span>
+            <span class="stack-pill">Google Business</span>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Web</span>
+            <a class="venture-card__link" href="https://cedarrapidswaterdamagepro.com" target="_blank" rel="noopener">Visit →</a>
+          </div>
+        </article>
+
+        <!-- 5. Optivio Media -->
+        <article class="venture-card fade-in" data-category="agency">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">Optivio Media</h3>
+            <span class="status-badge status-badge--live">Live</span>
+          </div>
+          <div class="venture-card__tagline">Structured Meta Ads for e-commerce brands</div>
+          <p class="venture-card__desc">Campaign architecture, creative testing, controlled scaling for $3k+/month e-commerce brands across UAE and Australia. Multiple 5-figure accounts.</p>
+          <div class="stack-list">
+            <span class="stack-pill">Meta Ads</span>
+            <span class="stack-pill">CAPI</span>
+            <span class="stack-pill">Shopify</span>
+            <span class="stack-pill">GA4</span>
+          </div>
+          <div class="venture-card__metrics">
+            <div class="venture-card__metric"><strong>$40k+</strong>Ad spend (90d)</div>
+            <div class="venture-card__metric"><strong>$14.94</strong>Avg CPA</div>
+            <div class="venture-card__metric"><strong>4.18x</strong>Blended ROAS</div>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Agency</span>
+            <a class="venture-card__link" href="https://optiviomedia.online" target="_blank" rel="noopener">Visit →</a>
+          </div>
+        </article>
+
+        <!-- 6. Instagram Lead Gen System -->
+        <article class="venture-card fade-in" data-category="tool">
+          <div class="venture-card__top">
+            <h3 class="venture-card__name">Instagram Lead Gen System</h3>
+            <span class="status-badge status-badge--internal">Internal</span>
+          </div>
+          <div class="venture-card__tagline">Internal outreach automation — 25 accounts, 300 DMs/day</div>
+          <p class="venture-card__desc">Custom-built pipeline: keyword → SerpAPI → Instagram URL extraction → Apify scraping → lead scoring → personalized DM generation → tracking dashboard.</p>
+          <div class="stack-list">
+            <span class="stack-pill">SerpAPI</span>
+            <span class="stack-pill">Apify</span>
+            <span class="stack-pill">Custom dashboard</span>
+            <span class="stack-pill">n8n</span>
+          </div>
+          <div class="venture-card__foot">
+            <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Tool</span>
+            <span class="venture-card__link venture-card__link--muted">No public link</span>
+          </div>
+        </article>
+
+      </div>
 
       <div class="text-center mt-6 fade-in">
         <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Working on something I should know about?</p>
@@ -118,8 +247,8 @@
         <div class="footer__links">
           <a href="about.html">About</a>
           <a href="ventures.html">Ventures</a>
-          <a href="writing.html">Writing</a>
           <a href="work-with-me.html">Work With Me</a>
+          <a href="writing.html">Writing</a>
           <a href="contact.html">Contact</a>
           <a href="https://www.linkedin.com/in/tahailyas/" target="_blank" rel="noopener">LinkedIn</a>
         </div>

@@ -108,9 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Ventures: render from /data/ventures.json ---
+  // --- Ventures: static-first, with optional JSON fallback ---
+  // Preferred: [data-static-ventures] containers with hard-coded <article data-category=…> cards.
+  // The filter bar toggles visibility on those static nodes (good for SEO + social previews).
+  const staticVentureMount = document.querySelector('[data-static-ventures]');
+  if (staticVentureMount) {
+    wireStaticFilter(staticVentureMount);
+  }
+
+  // Legacy: [data-ventures] containers fetch from JSON. Kept for backwards compat.
   const ventureMount = document.querySelector('[data-ventures]');
-  if (ventureMount) {
+  if (ventureMount && !ventureMount.hasAttribute('data-static-ventures')) {
     const mode = ventureMount.getAttribute('data-ventures'); // "featured" | "all"
     const dataPath = ventureMount.getAttribute('data-src') || 'data/ventures.json';
 
@@ -122,13 +130,28 @@ document.addEventListener('DOMContentLoaded', () => {
           .sort((a, b) => a.order - b.order);
         renderVentures(items, ventureMount);
         if (mode === 'all') wireFilter(items, ventureMount);
-        // Re-observe newly inserted fade-ins
         ventureMount.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
       })
       .catch(err => {
         console.error('Ventures load failed', err);
-        ventureMount.innerHTML = '<p style="color:var(--text-dark);text-align:center;">Could not load ventures.</p>';
       });
+  }
+
+  function wireStaticFilter(mount) {
+    const filterBar = document.querySelector('[data-filter]');
+    if (!filterBar) return;
+    const cards = Array.from(mount.querySelectorAll('.venture-card'));
+    filterBar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-bar__btn');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter-bar__btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const cat = btn.getAttribute('data-cat');
+      cards.forEach(card => {
+        const match = cat === 'all' || card.getAttribute('data-category') === cat;
+        card.style.display = match ? '' : 'none';
+      });
+    });
   }
 
   function renderVentures(items, mount) {
