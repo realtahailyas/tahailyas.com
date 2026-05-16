@@ -3,4 +3,4 @@ Allow: /
 
 Sitemap: https://tahailyas.com/sitemap.xml
 
-# TahaIlyas.com — Meta Ads Growth Operator
+# tahailyas.com — Founder building AI products & growth systems

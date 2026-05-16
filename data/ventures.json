@@ -1,0 +1,80 @@
+[
+  {
+    "id": "optivio-chatbot",
+    "name": "Optivio Chatbot",
+    "tagline": "AI sales assistant for e-commerce stores",
+    "description": "Embeddable AI chat widget that captures leads, answers product questions, and converts visitors into customers. Plans from free to $99/mo.",
+    "status": "live",
+    "url": "https://chatbot.tahailyas.com",
+    "stack": ["Next.js 14", "Supabase", "OpenAI GPT-4o-mini", "Polar.sh", "Vercel"],
+    "category": "saas",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "optivio-automation",
+    "name": "Optivio Automation",
+    "tagline": "AI voice receptionists for US local service businesses",
+    "description": "24/7 AI phone agents for dental clinics, HVAC companies, and med spas. Books appointments, captures leads, never misses a call. Starting $500/mo.",
+    "status": "live",
+    "url": "https://optivioautomation.com",
+    "stack": ["Retell AI", "Twilio", "n8n", "Next.js 14", "Brevo"],
+    "category": "agency",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "id": "certforge",
+    "name": "CertForge",
+    "tagline": "Smart certification exam prep, starting with AWS Cloud Practitioner",
+    "description": "Mobile app with intelligent weakness detection and adaptive question routing. Real readiness scoring, full mock exams, action-driven learning.",
+    "status": "launching",
+    "url": null,
+    "stack": ["React Native", "Expo SDK 54", "Supabase", "TypeScript", "AdMob"],
+    "category": "mobile",
+    "featured": true,
+    "order": 3
+  },
+  {
+    "id": "optivio-media",
+    "name": "Optivio Media",
+    "tagline": "Structured Meta Ads for e-commerce brands",
+    "description": "Campaign architecture, creative testing, controlled scaling for $3k+/month e-commerce brands across UAE and Australia. Multiple 5-figure accounts.",
+    "status": "live",
+    "url": "https://optiviomedia.online",
+    "stack": ["Meta Ads", "CAPI", "Shopify", "GA4"],
+    "category": "agency",
+    "featured": true,
+    "order": 4,
+    "metrics": {
+      "ad_spend": "$40k+",
+      "purchases": "2,679",
+      "cpa": "$14.94",
+      "roas": "4.18x"
+    }
+  },
+  {
+    "id": "rank-rent",
+    "name": "Rank & Rent Portfolio",
+    "tagline": "Local service lead-gen sites in US markets",
+    "description": "SEO-optimized service sites ranking for high-intent local searches, monetized by renting lead flow to local businesses.",
+    "status": "growing",
+    "url": "https://cedarrapidswaterdamagepro.com",
+    "stack": ["Static HTML", "Local SEO", "Google Business"],
+    "category": "web",
+    "featured": false,
+    "order": 5
+  },
+  {
+    "id": "instagram-leadgen",
+    "name": "Instagram Lead Gen System",
+    "tagline": "Internal outreach automation — 25 accounts, 300 DMs/day",
+    "description": "Custom-built pipeline: keyword → SerpAPI → Instagram URL extraction → Apify scraping → lead scoring → personalized DM generation → tracking dashboard.",
+    "status": "internal",
+    "url": null,
+    "stack": ["SerpAPI", "Apify", "Custom dashboard", "n8n"],
+    "category": "tool",
+    "featured": false,
+    "order": 6
+  }
+]

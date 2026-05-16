@@ -108,4 +108,92 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Ventures: render from /data/ventures.json ---
+  const ventureMount = document.querySelector('[data-ventures]');
+  if (ventureMount) {
+    const mode = ventureMount.getAttribute('data-ventures'); // "featured" | "all"
+    const dataPath = ventureMount.getAttribute('data-src') || 'data/ventures.json';
+
+    fetch(dataPath)
+      .then(r => r.json())
+      .then(list => {
+        const items = list
+          .filter(v => mode === 'all' ? true : v.featured)
+          .sort((a, b) => a.order - b.order);
+        renderVentures(items, ventureMount);
+        if (mode === 'all') wireFilter(items, ventureMount);
+        // Re-observe newly inserted fade-ins
+        ventureMount.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      })
+      .catch(err => {
+        console.error('Ventures load failed', err);
+        ventureMount.innerHTML = '<p style="color:var(--text-dark);text-align:center;">Could not load ventures.</p>';
+      });
+  }
+
+  function renderVentures(items, mount) {
+    mount.innerHTML = items.map(v => ventureCardHTML(v)).join('');
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[c]);
+  }
+
+  function ventureCardHTML(v) {
+    const statusLabel = {
+      live: 'Live', launching: 'Launching', growing: 'Growing',
+      internal: 'Internal', archived: 'Archived'
+    }[v.status] || v.status;
+
+    const stack = (v.stack || []).slice(0, 5).map(s =>
+      `<span class="stack-pill">${escapeHtml(s)}</span>`).join('');
+
+    const link = v.url
+      ? `<a class="venture-card__link" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">Visit →</a>`
+      : `<span class="venture-card__link venture-card__link--muted">No public link</span>`;
+
+    const metrics = v.metrics
+      ? `<div class="venture-card__metrics">
+           ${v.metrics.ad_spend ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.ad_spend)}</strong>Ad spend (90d)</div>` : ''}
+           ${v.metrics.cpa ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.cpa)}</strong>Avg CPA</div>` : ''}
+           ${v.metrics.roas ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.roas)}</strong>Blended ROAS</div>` : ''}
+         </div>`
+      : '';
+
+    return `
+      <article class="venture-card fade-in" data-category="${escapeHtml(v.category)}">
+        <div class="venture-card__top">
+          <h3 class="venture-card__name">${escapeHtml(v.name)}</h3>
+          <span class="status-badge status-badge--${escapeHtml(v.status)}">${escapeHtml(statusLabel)}</span>
+        </div>
+        <div class="venture-card__tagline">${escapeHtml(v.tagline)}</div>
+        <p class="venture-card__desc">${escapeHtml(v.description)}</p>
+        <div class="stack-list">${stack}</div>
+        ${metrics}
+        <div class="venture-card__foot">
+          <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">${escapeHtml(v.category)}</span>
+          ${link}
+        </div>
+      </article>`;
+  }
+
+  function wireFilter(items, mount) {
+    const filterBar = document.querySelector('[data-filter]');
+    if (!filterBar) return;
+    filterBar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-bar__btn');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter-bar__btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const cat = btn.getAttribute('data-cat');
+      const filtered = cat === 'all' ? items : items.filter(v => v.category === cat);
+      renderVentures(filtered, mount);
+      mount.querySelectorAll('.fade-in').forEach(el => {
+        el.classList.add('visible');
+      });
+    });
+  }
+
 });

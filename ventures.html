@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventures — Products & systems built by Taha Ilyas</title>
+  <meta name="description" content="Portfolio of AI products and growth systems by Taha Ilyas: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media, and more.">
+  <meta name="author" content="Taha Ilyas">
+
+  <meta property="og:title" content="Ventures — Taha Ilyas">
+  <meta property="og:description" content="Portfolio of AI products and growth systems: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tahailyas.com/ventures.html">
+  <meta property="og:image" content="https://tahailyas.com/images/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tahailyas">
+
+  <link rel="canonical" href="https://tahailyas.com/ventures.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Taha Ilyas",
+    "url": "https://tahailyas.com"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Ventures by Taha Ilyas",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "Optivio Chatbot", "url": "https://chatbot.tahailyas.com", "applicationCategory": "BusinessApplication", "description": "AI sales assistant for e-commerce stores" } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Organization", "name": "Optivio Automation", "url": "https://optivioautomation.com", "description": "AI voice receptionists for US local service businesses" } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "MobileApplication", "name": "CertForge", "applicationCategory": "EducationApplication", "operatingSystem": "Android", "description": "Certification exam prep app, starting with AWS Cloud Practitioner" } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "Organization", "name": "Optivio Media", "url": "https://optiviomedia.online", "description": "Meta Ads agency scaling e-commerce brands" } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "WebSite", "name": "Rank & Rent Portfolio", "url": "https://cedarrapidswaterdamagepro.com", "description": "Local service lead-gen sites in US markets" } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "Instagram Lead Gen System", "applicationCategory": "BusinessApplication", "description": "Internal outreach automation pipeline" } }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tahailyas.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Ventures", "item": "https://tahailyas.com/ventures.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">TAHA ILYAS<span>.</span></a>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="ventures.html" class="active">Ventures</a>
+        <a href="about.html">About</a>
+        <a href="writing.html">Writing</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </div>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Ventures</span>
+      <h1>Everything I've built.</h1>
+      <p>Live products, growing properties, internal tools. Sorted by what I'm putting the most weight behind.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 1.5rem;">
+    <div class="container">
+
+      <div class="filter-bar fade-in" data-filter>
+        <button class="filter-bar__btn is-active" data-cat="all">All</button>
+        <button class="filter-bar__btn" data-cat="saas">SaaS</button>
+        <button class="filter-bar__btn" data-cat="agency">Agency</button>
+        <button class="filter-bar__btn" data-cat="mobile">Mobile</button>
+        <button class="filter-bar__btn" data-cat="web">Web</button>
+        <button class="filter-bar__btn" data-cat="tool">Tool</button>
+      </div>
+
+      <div class="venture-grid" data-ventures="all" data-src="data/ventures.json"></div>
+
+      <div class="text-center mt-6 fade-in">
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Working on something I should know about?</p>
+        <a href="contact.html" class="btn btn--primary">Get in touch →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <p>© 2026 Taha Ilyas. Founder & Builder.</p>
+        </div>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="ventures.html">Ventures</a>
+          <a href="writing.html">Writing</a>
+          <a href="work-with-me.html">Work With Me</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.linkedin.com/in/tahailyas/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
