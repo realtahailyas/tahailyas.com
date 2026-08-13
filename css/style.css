@@ -1912,6 +1912,21 @@ table {
   line-height: 1.65;
   flex-grow: 1;
 }
+.venture-card__field {
+  margin-bottom: 0.85rem;
+}
+.venture-card__field:last-child {
+  margin-bottom: 0;
+}
+.venture-card__field strong {
+  display: block;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 0.2rem;
+}
 .venture-card__foot {
   margin-top: 1.4rem;
   padding-top: 1.1rem;

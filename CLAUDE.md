@@ -1,8 +1,8 @@
 # CLAUDE.md
 
-Personal site for **Taha Ilyas** — Pakistan-based solo founder. Positions Taha as a founder building AI products (Optivio Chatbot, Optivio Automation, CertForge) and running a Meta Ads agency (Optivio Media), not as a single-service consultant. Deployed at **tahailyas.com** (GitHub Pages, custom domain via `CNAME`).
+Personal site for **Taha Ilyas** — Pakistan-based AI Engineer & Product Builder. Positions Taha primarily as an engineer who ships AI applications, automation systems, and mobile/web products (TChess, ChessReel, CertForge, Instagram Outreach Automation, Optivio Chatbot), with Optivio Automation and Optivio Media (Meta Ads agency) as secondary/supporting ventures — not as a single-service consultant or agency landing page. Deployed at **tahailyas.com** (GitHub Pages, custom domain via `CNAME`).
 
-The current state is the result of a full rebrand spec'd in `tahailyas-rebrand-master-prompt.md`. SEO authority from the old Meta-Ads-only positioning is preserved via meta-refresh redirects, not deleted.
+The current state is the result of a full rebrand spec'd in `tahailyas-rebrand-master-prompt.md`, followed by a second positioning pass (2026-08-13) that re-centered the site on AI engineering/product work over Meta Ads. SEO authority from the old Meta-Ads-only positioning is preserved via meta-refresh redirects, not deleted.
 
 ## Stack
 
@@ -11,7 +11,7 @@ Plain static site — no build tooling, no framework, no package manager.
 - **HTML** — hand-written, one file per page, shared nav/footer copy-pasted across pages
 - **CSS** — single `css/style.css` (~2.1k lines, design tokens via `:root` variables; gold `#c8a865` on near-black)
 - **JS** — single `js/main.js` (~210 lines, vanilla DOM). Includes a venture-grid renderer that fetches `data/ventures.json`.
-- **Data** — `data/ventures.json` is the single source of truth for ventures; consumed by `index.html` (featured) and `ventures.html` (all + filter).
+- **Data** — `data/ventures.json` documents all projects/ventures as a reference. As of the "Hard-code ventures" commit, `index.html` and `ventures.html` render project cards as hardcoded HTML (`[data-static-ventures]`) rather than fetching the JSON, so the JSON and the markup must be kept in sync manually when a project changes. `js/main.js` still contains a legacy fetch-based renderer for `[data-ventures="featured"|"all"]` (unused by current markup, kept for backwards compatibility).
 - **Fonts** — Google Fonts `Inter`
 - **SEO** — JSON-LD (WebSite, Person, ItemList, Service, Article, Blog, BreadcrumbList, FAQPage, ContactPage), Open Graph, Twitter cards, `sitemap.xml`, `robots.txt`
 - **Hosting** — GitHub Pages with `CNAME` → `tahailyas.com`. No `.htaccess` / `_redirects` — all redirects are meta-refresh stubs.
@@ -51,8 +51,10 @@ Plain static site — no build tooling, no framework, no package manager.
 ## Navigation (shared across every page)
 
 ```
-Home · Ventures · About · Writing · Work With Me · Contact
+Home · Projects · About · Writing · Work With Me · Contact
 ```
+
+Note: the nav *label* is "Projects" but the underlying file/URL is still `ventures.html` (kept for SEO/link continuity — do not rename the file).
 
 The nav is duplicated inline in every HTML file (no templates). When changing nav links, you must edit:
 - 6 root pages (`index.html`, `ventures.html`, `about.html`, `writing.html`, `work-with-me.html`, `contact.html`)
@@ -64,15 +66,15 @@ The 4 redirect stubs (`case-studies.html`, `proof.html`, `insights.html`, plus 3
 
 ```
 © 2026 Taha Ilyas. Founder & Builder.
-About · Ventures · Writing · Work With Me · Contact · LinkedIn
+About · Projects · Writing · Work With Me · Contact · LinkedIn
 ```
 
-## Ventures data flow
+## Ventures / Projects data flow
 
-- `data/ventures.json` is the canonical list (6 ventures: Optivio Chatbot, Optivio Automation, CertForge, Optivio Media, Rank & Rent, Instagram Lead Gen).
-- `js/main.js` looks for `[data-ventures="featured"]` (renders only `featured: true`, used on `index.html`) and `[data-ventures="all"]` (renders all, used on `ventures.html`).
-- The filter bar on `ventures.html` uses `[data-filter]` with `data-cat` attributes (`all`, `saas`, `agency`, `mobile`, `web`, `tool`).
-- **To add or update a venture, edit `data/ventures.json` only.** No HTML change required for the cards themselves.
+- `data/ventures.json` documents the canonical list of 8 projects, in priority order: TChess, ChessReel, CertForge, Instagram Outreach Automation, Optivio Chatbot (featured — AI/product work), then Optivio Automation, Optivio Media, Rank & Rent (secondary — agency/growth-systems work).
+- Cards are **hardcoded HTML** in `index.html` (5 featured) and `ventures.html` (all 8, with Problem/What I Built/Result fields via `.venture-card__field`) — see the Data note above. `js/main.js` still contains `[data-ventures="featured"|"all"]` JSON-fetch rendering as legacy/unused fallback.
+- The filter bar on `ventures.html` uses `[data-filter]` with `data-cat` attributes (`all`, `mobile`, `saas`, `tool`, `agency`, `web`).
+- **To add or update a project, edit the hardcoded card markup in `index.html`/`ventures.html` AND `data/ventures.json`** to keep them in sync.
 - Card status uses `status-badge--<status>` (`live` green, `launching` amber, `growing` blue, `internal` grey, `archived` muted).
 
 ## Design system (`css/style.css` `:root`)
@@ -127,7 +129,7 @@ JSON-LD schema is inline per page; major types in use:
 ## Working in this repo
 
 - **Editing pages**: nav, footer, and JSON-LD blocks are repeated inline. Update all relevant HTML files when changing those.
-- **Adding a venture**: edit `data/ventures.json` only. Cards auto-render on `index.html` (if `featured: true`) and `ventures.html`.
+- **Adding a project/venture**: cards are hardcoded — add the `<article class="venture-card">` block to `ventures.html` (and to `index.html` too if it should be featured), and add a matching entry to `data/ventures.json` for reference.
 - **Adding an article**: create `writing/<slug>.html` (copy structure of existing articles — use `../` paths in nav/footer/CSS). Then add an `<article class="insight-card">` to `writing.html` and a `<url>` entry to `sitemap.xml`.
 - **Mobile**: spec calls for 360px+ support. The CSS has breakpoints at 900px, 600px, 360px. Test those when changing layouts.
 - **No build step**: open the HTML files directly or serve the directory (`python -m http.server`, etc.). Required: when running locally, serve over HTTP (not `file://`) so `fetch('data/ventures.json')` works.
