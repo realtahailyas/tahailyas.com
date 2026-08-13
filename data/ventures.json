@@ -7,8 +7,8 @@
     "built": "A mobile-first tactics trainer with a hand-built chess board and solving engine (no third-party chessboard library), 60,000 curated Lichess puzzles bundled into an offline SQLite database, an animated TikTok-style tactics feed that plays with zero network calls, gamified XP/streaks/achievements, and a Pro tier with opening tools and an AI coach.",
     "result": "60,000 real puzzles verified against the engine with zero failures; 51,837 compiled cleanly into the offline feed. Free tier stays fully offline and ad-free.",
     "description": "Mobile-first tactics trainer with a hand-built board and engine, 60,000 puzzles bundled offline, and an animated tactics feed that plays with zero network calls.",
-    "status": "launching",
-    "url": null,
+    "status": "live",
+    "url": "https://tchess.app",
     "stack": ["React Native", "Expo", "TypeScript", "Supabase", "SQLite"],
     "category": "mobile",
     "featured": true,
@@ -86,7 +86,7 @@
     "url": "https://optivioautomation.com",
     "stack": ["Retell AI", "Twilio", "n8n", "Next.js 14", "Brevo"],
     "category": "agency",
-    "featured": false,
+    "featured": true,
     "order": 6
   },
   {
@@ -101,7 +101,7 @@
     "url": "https://optiviomedia.online",
     "stack": ["Meta Ads", "CAPI", "Shopify", "GA4"],
     "category": "agency",
-    "featured": false,
+    "featured": true,
     "order": 7,
     "metrics": {
       "ad_spend": "$40k+",
@@ -122,7 +122,7 @@
     "url": "https://cedarrapidswaterdamagepro.com",
     "stack": ["Static HTML", "Local SEO", "Google Business"],
     "category": "web",
-    "featured": false,
+    "featured": true,
     "order": 8
   }
 ]

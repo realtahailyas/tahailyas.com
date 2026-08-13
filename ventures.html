@@ -39,14 +39,14 @@
     "@type": "ItemList",
     "name": "Projects by Taha Ilyas",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "item": { "@type": "MobileApplication", "name": "TChess", "applicationCategory": "GameApplication", "operatingSystem": "Android", "description": "Offline chess tactics trainer with 60,000 puzzles" } },
-      { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "ChessReel", "applicationCategory": "MultimediaApplication", "description": "Automated pipeline that turns chess puzzles into short-form video" } },
-      { "@type": "ListItem", "position": 3, "item": { "@type": "MobileApplication", "name": "CertForge", "applicationCategory": "EducationApplication", "operatingSystem": "Android", "description": "Certification exam prep app, starting with AWS Cloud Practitioner" } },
-      { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "Instagram Outreach Automation", "applicationCategory": "BusinessApplication", "description": "Internal outreach automation pipeline" } },
-      { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "Optivio Chatbot", "url": "https://chatbot.tahailyas.com", "applicationCategory": "BusinessApplication", "description": "AI sales assistant for e-commerce stores" } },
-      { "@type": "ListItem", "position": 6, "item": { "@type": "Organization", "name": "Optivio Automation", "url": "https://optivioautomation.com", "description": "AI voice receptionists for US local service businesses" } },
-      { "@type": "ListItem", "position": 7, "item": { "@type": "Organization", "name": "Optivio Media", "url": "https://optiviomedia.online", "description": "Meta Ads agency scaling e-commerce brands" } },
-      { "@type": "ListItem", "position": 8, "item": { "@type": "WebSite", "name": "Rank & Rent Portfolio", "url": "https://cedarrapidswaterdamagepro.com", "description": "Local service lead-gen sites in US markets" } }
+      { "@type": "ListItem", "position": 1, "item": { "@type": "MobileApplication", "name": "TChess", "url": "https://tchess.app", "applicationCategory": "GameApplication", "operatingSystem": "Android, Web", "description": "Offline chess tactics trainer with 60,000 puzzles", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "ChessReel", "applicationCategory": "MultimediaApplication", "description": "Automated pipeline that turns chess puzzles into short-form video", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "MobileApplication", "name": "CertForge", "applicationCategory": "EducationApplication", "operatingSystem": "Android", "description": "Certification exam prep app, starting with AWS Cloud Practitioner", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "Instagram Outreach Automation", "applicationCategory": "BusinessApplication", "description": "Internal outreach automation pipeline", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "Optivio Chatbot", "url": "https://chatbot.tahailyas.com", "applicationCategory": "BusinessApplication", "description": "AI sales assistant for e-commerce stores", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "Organization", "name": "Optivio Automation", "url": "https://optivioautomation.com", "description": "AI voice receptionists for US local service businesses", "founder": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 7, "item": { "@type": "Organization", "name": "Optivio Media", "url": "https://optiviomedia.online", "description": "Meta Ads agency scaling e-commerce brands", "founder": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } },
+      { "@type": "ListItem", "position": 8, "item": { "@type": "WebSite", "name": "Rank & Rent Portfolio", "url": "https://cedarrapidswaterdamagepro.com", "description": "Local service lead-gen sites in US markets", "creator": { "@type": "Person", "name": "Taha Ilyas", "url": "https://tahailyas.com" } } }
     ]
   }
   </script>
@@ -107,9 +107,14 @@
         <article class="venture-card fade-in" data-category="mobile">
           <div class="venture-card__top">
             <h3 class="venture-card__name">TChess</h3>
-            <span class="status-badge status-badge--launching">Launching</span>
+            <span class="status-badge status-badge--live">Live</span>
           </div>
           <div class="venture-card__tagline">Offline chess tactics trainer — 60,000 puzzles, zero ads</div>
+          <div class="venture-card__shots">
+            <img src="images/tchess-1.png" alt="TChess puzzle solver screen" loading="lazy" width="72" height="156">
+            <img src="images/tchess-2.png" alt="TChess animated tactics feed" loading="lazy" width="72" height="156">
+            <img src="images/tchess-3.png" alt="TChess profile and stats screen" loading="lazy" width="72" height="156">
+          </div>
           <div class="venture-card__desc">
             <div class="venture-card__field"><strong>Problem</strong>Chess-improvement apps either need a constant connection or don't build real tactical pattern recognition through fast, repeated reps.</div>
             <div class="venture-card__field"><strong>What I Built</strong>A mobile-first tactics trainer with a hand-built chess board and solving engine — no third-party chessboard library — 60,000 curated puzzles bundled into an offline SQLite database, an animated TikTok-style tactics feed with zero network calls, gamified XP/streaks, and a Pro tier with opening tools and an AI coach.</div>
@@ -124,7 +129,7 @@
           </div>
           <div class="venture-card__foot">
             <span class="venture-card__category" style="font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dark);">Mobile</span>
-            <span class="venture-card__link venture-card__link--muted">Launching soon</span>
+            <a class="venture-card__link" href="https://tchess.app" target="_blank" rel="noopener">Visit →</a>
           </div>
         </article>
 

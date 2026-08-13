@@ -33,7 +33,7 @@ Plain static site — no build tooling, no framework, no package manager.
 ├── data/ventures.json      Source of truth for ventures
 ├── css/style.css           All site styles
 ├── js/main.js              Nav, fade-in observer, counters, venture renderer, filter
-├── images/                 1.png … 6.png (proof screenshots), taha.png
+├── images/                 1.png … 6.png (Meta Ads proof screenshots), taha.png, tchess-1/2/3.png (real TChess app UI, from D:\ChessReel\puzzleflow\store\screenshots)
 ├── favicon.svg
 ├── CNAME                   tahailyas.com
 ├── robots.txt
