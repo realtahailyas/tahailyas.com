@@ -2152,6 +2152,57 @@ table {
 .now-block li:last-child { border-bottom: none; }
 .now-block li strong { color: var(--white); }
 
+/* --- Subsection divider (marks secondary/supporting content) --- */
+.subsection-divider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 0.75rem 0 0.5rem;
+  color: var(--text-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.subsection-divider::before,
+.subsection-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* --- Secondary venture card (growth/business experience, not primary offer) --- */
+.venture-card--secondary .venture-card__metrics {
+  gap: 1.2rem;
+  border-top-style: solid;
+}
+.venture-card--secondary .venture-card__metric strong {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+/* --- What Can Be Automated (business-problem section) --- */
+.automate-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 780px;
+  margin: 2rem auto 0;
+}
+.automate-list .stack-pill {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+.automate-note {
+  max-width: 620px;
+  margin: 2rem auto 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
 /* --- Mobile --- */
 @media (max-width: 900px) {
   .venture-grid { grid-template-columns: 1fr; gap: 1.25rem; }

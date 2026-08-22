@@ -140,17 +140,31 @@ document.addEventListener('DOMContentLoaded', () => {
   function wireStaticFilter(mount) {
     const filterBar = document.querySelector('[data-filter]');
     if (!filterBar) return;
-    const cards = Array.from(mount.querySelectorAll('.venture-card'));
+    const children = Array.from(mount.children);
     filterBar.addEventListener('click', e => {
       const btn = e.target.closest('.filter-bar__btn');
       if (!btn) return;
       filterBar.querySelectorAll('.filter-bar__btn').forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
       const cat = btn.getAttribute('data-cat');
-      cards.forEach(card => {
-        const match = cat === 'all' || card.getAttribute('data-category') === cat;
-        card.style.display = match ? '' : 'none';
+
+      // Toggle cards, then hide any divider whose following group has nothing visible.
+      let pendingDivider = null;
+      children.forEach(child => {
+        if (child.classList.contains('subsection-divider')) {
+          if (pendingDivider) pendingDivider.style.display = 'none';
+          pendingDivider = child;
+          return;
+        }
+        if (!child.classList.contains('venture-card')) return;
+        const match = cat === 'all' || child.getAttribute('data-category') === cat;
+        child.style.display = match ? '' : 'none';
+        if (match && pendingDivider) {
+          pendingDivider.style.display = '';
+          pendingDivider = null;
+        }
       });
+      if (pendingDivider) pendingDivider.style.display = 'none';
     });
   }
 
