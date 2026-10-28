@@ -2,3 +2,36 @@
 Thumbs.db
 *.log
 .vscode/
+_linkedin_staging/
+
+# Secrets & build artifacts (security hardening)
+.env
+.env.*
+!.env.example
+*.local
+*.jks
+*.keystore
+keystore.properties
+credentials/
+*service-account*.json
+tchess-*-*.json
+client_secret*.json
+*.pem
+*.p12
+*.key
+.secrets/
+*.aab
+*.apk
+.claude/settings.local.json
+.vercel
+node_modules/
+.next/
+dist/
+build/
+
+# AI-agent scaffolding (kept locally, not tracked)
+.claude/
+AGENTS.md
+CLAUDE.md
+*PROMPT*.md
+*-master-prompt.md
