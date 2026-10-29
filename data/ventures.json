@@ -38,11 +38,41 @@
     "result": "Launching with AWS Cloud Practitioner as the first certification track, built to expand to additional certs on the same engine.",
     "description": "Mobile app with intelligent weakness detection and adaptive question routing. Real readiness scoring, full mock exams, action-driven learning.",
     "status": "launching",
-    "url": null,
+    "url": "https://play.google.com/store/apps/details?id=com.getcertforge.app",
     "stack": ["React Native", "Expo SDK 54", "Supabase", "TypeScript", "AdMob"],
     "category": "mobile",
     "featured": true,
     "order": 3
+  },
+  {
+    "id": "dareclock",
+    "name": "DareClock",
+    "tagline": "Alarm clock you can only stop by getting out of bed",
+    "problem": "Snooze buttons make alarms optional. Waking up needs a task that forces you out of bed.",
+    "built": "A native Android alarm that only stops when you finish a mission: push-ups counted live with on-device pose detection, a photo mission, or a mind puzzle.",
+    "result": "Live on Google Play, published under Optivio Automation.",
+    "description": "Native Android alarm that keeps ringing until you finish a push-up, photo or mind mission.",
+    "status": "live",
+    "url": "https://play.google.com/store/apps/details?id=com.dareclock",
+    "stack": ["Kotlin", "Jetpack Compose", "CameraX", "ML Kit"],
+    "category": "mobile",
+    "featured": true,
+    "order": 4
+  },
+  {
+    "id": "brickrush",
+    "name": "Brick Breaker: Power Rush",
+    "tagline": "Arcade brick breaker with ball volleys and missions",
+    "problem": "Casual brick breakers are mostly ad walls with little to master.",
+    "built": "A Unity arcade game with ball volleys, ball upgrades and level missions, optional Google Play Games cloud save, and a remove-ads purchase.",
+    "result": "Live on Google Play, published under Optivio Automation.",
+    "description": "Unity arcade brick breaker with ball volleys, ball upgrades and level missions.",
+    "status": "live",
+    "url": "https://play.google.com/store/apps/details?id=com.brickrush",
+    "stack": ["Unity", "C#", "Google Play Games"],
+    "category": "mobile",
+    "featured": true,
+    "order": 5
   },
   {
     "id": "instagram-outreach-automation",
@@ -57,7 +87,7 @@
     "stack": ["SerpAPI", "Apify", "n8n", "Custom dashboard"],
     "category": "tool",
     "featured": true,
-    "order": 4
+    "order": 6
   },
   {
     "id": "optivio-chatbot",
@@ -72,7 +102,7 @@
     "stack": ["Next.js 14", "Supabase", "OpenAI GPT-4o-mini", "Polar.sh", "Vercel"],
     "category": "saas",
     "featured": true,
-    "order": 5
+    "order": 7
   },
   {
     "id": "optivio-automation",
@@ -87,7 +117,7 @@
     "stack": ["Retell AI", "Twilio", "n8n", "Next.js 14", "Brevo"],
     "category": "agency",
     "featured": true,
-    "order": 6
+    "order": 8
   },
   {
     "id": "optivio-media",
@@ -102,7 +132,7 @@
     "stack": ["Meta Ads", "CAPI", "Shopify", "GA4"],
     "category": "agency",
     "featured": true,
-    "order": 7,
+    "order": 9,
     "metrics": {
       "ad_spend": "$40k+",
       "purchases": "2,679",
@@ -123,6 +153,6 @@
     "stack": ["Static HTML", "Local SEO", "Google Business"],
     "category": "web",
     "featured": true,
-    "order": 8
+    "order": 10
   }
 ]
