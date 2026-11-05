@@ -191,13 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `<a class="venture-card__link" href="${escapeHtml(v.url)}" target="_blank" rel="noopener">Visit →</a>`
       : `<span class="venture-card__link venture-card__link--muted">No public link</span>`;
 
-    const metrics = v.metrics
-      ? `<div class="venture-card__metrics">
-           ${v.metrics.ad_spend ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.ad_spend)}</strong>Ad spend (90d)</div>` : ''}
-           ${v.metrics.cpa ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.cpa)}</strong>Avg CPA</div>` : ''}
-           ${v.metrics.roas ? `<div class="venture-card__metric"><strong>${escapeHtml(v.metrics.roas)}</strong>Blended ROAS</div>` : ''}
-         </div>`
-      : '';
+    const metrics = '';
 
     return `
       <article class="venture-card fade-in" data-category="${escapeHtml(v.category)}">
