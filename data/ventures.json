@@ -2,157 +2,155 @@
   {
     "id": "tchess",
     "name": "TChess",
-    "tagline": "Offline chess tactics trainer — 60,000 puzzles, zero ads",
-    "problem": "Chess-improvement apps either need a constant connection or don't build real tactical pattern recognition through fast, repeated reps.",
-    "built": "A mobile-first tactics trainer with a hand-built chess board and solving engine (no third-party chessboard library), 60,000 curated Lichess puzzles bundled into an offline SQLite database, an animated TikTok-style tactics feed that plays with zero network calls, gamified XP/streaks/achievements, and a Pro tier with opening tools and an AI coach.",
-    "result": "60,000 real puzzles verified against the engine with zero failures; 51,837 compiled cleanly into the offline feed. Free tier stays fully offline and ad-free.",
-    "description": "Mobile-first tactics trainer with a hand-built board and engine, 60,000 puzzles bundled offline, and an animated tactics feed that plays with zero network calls.",
+    "tagline": "Chess training app for Android and web. 1,000+ installs, 4.8 rating",
+    "description": "Chess training app built with React Native, Expo and TypeScript, plus a Next.js web version. Runs Stockfish 17.1 on the device through a custom native module, with subscriptions across RevenueCat, Google Play Billing and Paddle.",
     "status": "live",
-    "url": "https://tchess.app",
-    "stack": ["React Native", "Expo", "TypeScript", "Supabase", "SQLite"],
+    "fields": {
+      "Problem": "Chess players need a trainer that works offline, on a phone, with a real engine behind it, and a business model that survives reinstalls and clock tricks.",
+      "What I Built": "An Android app and web version with a hand-built board, 60,000 bundled puzzles, Stockfish 17.1 integrated through a custom NDK/JNI module, and subscriptions across RevenueCat, Google Play Billing and Paddle. Backend on Supabase with 11 Edge Functions and 48 Postgres migrations with row-level security.",
+      "Result": "1,000+ Play installs, a 4.8 rating and 500+ monthly active devices. 1,500+ automated test cases across app and web, plus an engine check that replays all 60,000 bundled puzzles."
+    },
+    "stack": [
+      "React Native 0.86",
+      "Expo 57",
+      "TypeScript",
+      "Next.js",
+      "Stockfish 17.1",
+      "NDK/JNI",
+      "Supabase",
+      "RevenueCat"
+    ],
     "category": "mobile",
     "featured": true,
-    "order": 1
-  },
-  {
-    "id": "chessreel",
-    "name": "ChessReel",
-    "tagline": "Automated pipeline that turns chess puzzles into short-form video",
-    "problem": "Growing a chess app from zero needs constant short-form content, but hand-editing chess videos doesn't scale past a handful a week.",
-    "built": "A CPU-only Python pipeline that turns Lichess sacrifice puzzles into fully produced vertical videos — animated board, synthesized voiceover, sound effects, background music, and Claude-written captions — batch-producing dozens of ready-to-post reels per run.",
-    "result": "Fully automated puzzle-to-video pipeline with no GPU or ML models required, feeding TChess's organic growth across Instagram, YouTube, and TikTok.",
-    "description": "CPU-only Python pipeline that turns Lichess puzzles into fully produced vertical videos — board animation, voiceover, sound, music, and AI-written captions.",
-    "status": "live",
-    "url": null,
-    "stack": ["Python", "FFmpeg", "edge-tts", "Claude API"],
-    "category": "tool",
-    "featured": true,
-    "order": 2
-  },
-  {
-    "id": "certforge",
-    "name": "CertForge",
-    "tagline": "Smart certification exam prep, starting with AWS Cloud Practitioner",
-    "problem": "Cert prep apps dump question banks on users without telling them what they're actually weak on or when they're ready to sit the real exam.",
-    "built": "A mobile app with intelligent weakness detection and adaptive question routing — real readiness scoring, full mock exams, and action-driven learning instead of a flat quiz bank.",
-    "result": "Live on Google Play, published under Optivio Automation. AWS Cloud Practitioner is the first certification track, built to expand to additional certs on the same engine.",
-    "description": "Mobile app with intelligent weakness detection and adaptive question routing. Real readiness scoring, full mock exams, action-driven learning.",
-    "status": "live",
-    "url": "https://play.google.com/store/apps/details?id=com.getcertforge.app",
-    "stack": ["React Native", "Expo SDK 54", "Supabase", "TypeScript", "AdMob"],
-    "category": "mobile",
-    "featured": true,
-    "order": 10
+    "order": 1,
+    "url": "https://tchess.app"
   },
   {
     "id": "dareclock",
     "name": "DareClock",
-    "tagline": "Alarm clock you can only stop by getting out of bed",
-    "problem": "Snooze buttons make alarms optional. Waking up needs a task that forces you out of bed.",
-    "built": "A native Android alarm that only stops when you finish a mission: push-ups counted live with on-device pose detection, a photo mission, or a mind puzzle.",
-    "result": "Live on Google Play, published under Optivio Automation.",
-    "description": "Native Android alarm that keeps ringing until you finish a push-up, photo or mind mission.",
+    "tagline": "Native Android alarm that only stops after a camera-verified exercise",
+    "description": "Native Kotlin and Jetpack Compose alarm. It keeps ringing until you finish a mission, such as push-ups counted live with CameraX and on-device ML Kit pose detection. 7 releases in 3 weeks, 200 JUnit tests.",
     "status": "live",
-    "url": "https://play.google.com/store/apps/details?id=com.dareclock",
-    "stack": ["Kotlin", "Jetpack Compose", "CameraX", "ML Kit"],
+    "fields": {
+      "Problem": "Snooze buttons make alarms optional. Waking up needs a task that forces you out of bed.",
+      "What I Built": "A native app in Kotlin 2.2 and Jetpack Compose with CameraX and on-device ML Kit pose detection. Exact alarms, a foreground ringing service, boot recovery and an offline event queue, with Play Billing and RevenueCat.",
+      "Result": "Shipped 7 releases in 3 weeks, backed by 200 JUnit tests. Live on Google Play."
+    },
+    "stack": [
+      "Kotlin 2.2",
+      "Jetpack Compose",
+      "CameraX",
+      "ML Kit",
+      "Play Billing",
+      "RevenueCat",
+      "JUnit"
+    ],
     "category": "mobile",
     "featured": true,
-    "order": 3
+    "order": 2,
+    "url": "https://play.google.com/store/apps/details?id=com.dareclock"
   },
   {
     "id": "brickrush",
     "name": "Brick Breaker: Power Rush",
-    "tagline": "Arcade brick breaker with ball volleys and missions",
-    "problem": "Casual brick breakers are mostly ad walls with little to master.",
-    "built": "A Unity arcade game with ball volleys, ball upgrades and level missions, optional Google Play Games cloud save, and a remove-ads purchase.",
-    "result": "Live on Google Play, published under Optivio Automation.",
-    "description": "Unity arcade brick breaker with ball volleys, ball upgrades and level missions.",
+    "tagline": "Unity arcade game on Google Play",
+    "description": "Unity arcade brick breaker with ball volleys, ball upgrades, level missions, optional Google Play Games cloud save and a remove-ads purchase.",
     "status": "live",
-    "url": "https://play.google.com/store/apps/details?id=com.brickrush",
-    "stack": ["Unity", "C#", "Google Play Games"],
+    "fields": {
+      "What I Built": "A Unity arcade game with ball volleys, ball upgrades and level missions, optional Google Play Games cloud save, and a remove-ads purchase.",
+      "Result": "Live on Google Play, published under Optivio Automation."
+    },
+    "stack": [
+      "Unity",
+      "C#",
+      "Google Play Games"
+    ],
     "category": "mobile",
     "featured": true,
-    "order": 4
+    "order": 3,
+    "url": "https://play.google.com/store/apps/details?id=com.brickrush"
   },
   {
-    "id": "instagram-outreach-automation",
-    "name": "Instagram Outreach Automation",
-    "tagline": "Internal outreach system — 25 accounts, 300 DMs/day",
-    "problem": "Manually finding and messaging qualified leads on Instagram doesn't scale past a handful of accounts a day.",
-    "built": "A custom pipeline: keyword → SerpAPI → Instagram URL extraction → Apify scraping → lead scoring → personalized DM generation → tracking dashboard, running unattended across 25 accounts.",
-    "result": "300 personalized DMs sent per day with zero manual lookup, tracked end-to-end on a custom dashboard.",
-    "description": "Custom-built pipeline: keyword → SerpAPI → Instagram URL extraction → Apify scraping → lead scoring → personalized DM generation → tracking dashboard.",
+    "id": "chess-automation",
+    "name": "Chess Content Automation",
+    "tagline": "Python pipeline that renders and publishes narrated chess reels",
+    "description": "Pipeline built with Python, FFmpeg, Remotion and Playwright that renders and publishes narrated reels to Instagram, YouTube, Facebook and TikTok. 1,078 logged posts, 237 unit tests, Next.js control dashboard.",
     "status": "internal",
-    "url": null,
-    "stack": ["SerpAPI", "Apify", "n8n", "Custom dashboard"],
+    "fields": {
+      "Problem": "Growing a chess app needs a steady stream of short video, and hand-editing it does not scale.",
+      "What I Built": "A pipeline with Python, FFmpeg, Remotion and Playwright that renders and publishes narrated reels on a schedule to Instagram, YouTube, Facebook and TikTok, with a Next.js control dashboard.",
+      "Result": "1,078 published posts logged across 73 days, 480,000+ recorded plays and 237 unit tests."
+    },
+    "stack": [
+      "Python",
+      "FFmpeg",
+      "Remotion",
+      "Playwright",
+      "Next.js"
+    ],
     "category": "tool",
     "featured": true,
-    "order": 5
+    "order": 4,
+    "url": "https://github.com/realtahailyas/chess-reels"
   },
   {
-    "id": "optivio-chatbot",
+    "id": "chatbot",
     "name": "Optivio Chatbot",
-    "tagline": "AI sales assistant for e-commerce stores",
-    "problem": "Most e-commerce stores lose visitors who have a question at 2am and nobody to ask.",
-    "built": "An embeddable AI chat widget that captures leads, answers product questions, and converts visitors into customers — billing, plans, and dashboard included.",
-    "result": "Live SaaS product with plans from free to $99/mo, running on a production Next.js + Supabase stack.",
-    "description": "Embeddable AI chat widget that captures leads, answers product questions, and converts visitors into customers. Plans from free to $99/mo.",
-    "status": "live",
-    "url": "https://chatbot.tahailyas.com",
-    "stack": ["Next.js 14", "Supabase", "OpenAI GPT-4o-mini", "Polar.sh", "Vercel"],
+    "tagline": "Embeddable AI chat widget for online stores",
+    "description": "Built an embeddable AI chat widget for e-commerce stores that answers product questions and captures leads.",
+    "status": "internal",
+    "fields": {
+      "What I Built": "An embeddable AI chat widget for e-commerce stores that answers product questions and captures leads, with a Next.js and Supabase backend and the OpenAI API."
+    },
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "OpenAI API",
+      "Vercel"
+    ],
     "category": "saas",
-    "featured": true,
-    "order": 6
+    "featured": false,
+    "order": 5,
+    "url": "https://chatbot.tahailyas.com"
   },
   {
-    "id": "optivio-automation",
+    "id": "optivio",
     "name": "Optivio Automation",
-    "tagline": "AI receptionists for UK dental practices · Google Play publisher",
-    "problem": "Dental practices lose new patients every time a call goes unanswered — after hours, at lunch, or when the front desk is busy.",
-    "built": "24/7 AI receptionists that answer every call, book appointments, handle after-hours emergencies, and run automated recall campaigns — GDPR-compliant, set up in under 5 days.",
-    "result": "Live service for UK dental practices. Optivio Automation is also the Google Play publisher of my 4 apps: TChess, DareClock, CertForge and Brick Breaker: Power Rush.",
-    "description": "24/7 AI receptionists for UK dental practices — answers every call, books appointments, handles after-hours emergencies, runs recall campaigns. Also the Google Play publisher of TChess, DareClock, CertForge and Brick Breaker: Power Rush.",
+    "tagline": "Software company: apps, AI voice agents, puzzle book publishing, automation",
+    "description": "Software company I founded. It publishes Android apps (TChess, DareClock, Brick Breaker: Power Rush and CertForge on Google Play) and builds AI voice agents, puzzle book publishing tooling and automation systems.",
     "status": "live",
-    "url": "https://optivioautomation.com",
-    "stack": ["Retell AI", "Twilio", "n8n", "Next.js 14", "Brevo"],
-    "category": "agency",
-    "featured": true,
-    "order": 7
+    "fields": {
+      "What it is": "A software company I founded in May 2023. It publishes Android apps, builds AI voice agents and automation systems, and makes puzzle book publishing tools.",
+      "Where to see it": "The apps page lists everything published on Google Play under the Optivio Automation name."
+    },
+    "stack": [
+      "Android apps",
+      "AI voice agents",
+      "Puzzle books",
+      "Automation"
+    ],
+    "category": "company",
+    "featured": false,
+    "order": 6,
+    "url": "https://optivioautomation.com"
   },
   {
-    "id": "optivio-media",
-    "name": "Optivio Media",
-    "tagline": "Structured Meta Ads for e-commerce brands",
-    "problem": "E-commerce brands scale ad spend without campaign architecture, tracking, or a testing system, and CPA climbs until the account stalls.",
-    "built": "Campaign architecture, systematic creative testing, and controlled scaling for $3k+/month e-commerce brands across UAE and Australia.",
-    "result": "Multiple 5-figure accounts managed, blended CPA of $14.94 and 4.18x ROAS across a 90-day account.",
-    "description": "Campaign architecture, creative testing, controlled scaling for $3k+/month e-commerce brands across UAE and Australia. Multiple 5-figure accounts.",
-    "status": "live",
-    "url": "https://optiviomedia.online",
-    "stack": ["Meta Ads", "CAPI", "Shopify", "GA4"],
-    "category": "agency",
-    "featured": true,
-    "order": 8,
-    "metrics": {
-      "ad_spend": "$40k+",
-      "purchases": "2,679",
-      "cpa": "$14.94",
-      "roas": "4.18x"
-    }
-  },
-  {
-    "id": "rank-rent",
-    "name": "Local Lead-Generation Sites",
-    "tagline": "Local lead-generation sites (portfolio)",
-    "problem": "Local service businesses need lead flow but don't want to run their own SEO or ads.",
-    "built": "SEO-optimized service sites ranking for high-intent local searches, monetized by renting the lead flow to local businesses.",
-    "result": "Small portfolio of local SEO sites.",
-    "description": "SEO-optimized service sites ranking for high-intent local searches, monetized by renting lead flow to local businesses.",
-    "status": "growing",
-    "url": null,
-    "stack": ["Static HTML", "Local SEO", "Google Business"],
-    "category": "web",
-    "featured": true,
-    "order": 9
+    "id": "certforge",
+    "name": "CertForge",
+    "tagline": "Early AWS exam prep app",
+    "description": "Early AWS exam prep app published on Google Play, built with React Native and Supabase.",
+    "status": "internal",
+    "fields": {
+      "What I Built": "An early AWS exam prep app published on Google Play, built with React Native and Supabase."
+    },
+    "stack": [
+      "React Native",
+      "Supabase",
+      "TypeScript"
+    ],
+    "category": "mobile",
+    "featured": false,
+    "order": 7,
+    "url": "https://play.google.com/store/apps/details?id=com.getcertforge.app"
   }
 ]

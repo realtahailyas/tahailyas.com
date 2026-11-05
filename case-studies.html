@@ -2,14 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Case Studies — Moved to Work With Me · Taha Ilyas</title>
-  <meta name="robots" content="noindex, follow">
-  <meta http-equiv="refresh" content="0; url=/work-with-me.html#case-studies">
-  <link rel="canonical" href="https://tahailyas.com/work-with-me.html#case-studies">
-  <script>window.location.replace('/work-with-me.html#case-studies');</script>
-  <style>body{font-family:system-ui,sans-serif;background:#0a0a0a;color:#e8e8e8;padding:3rem 1.5rem;text-align:center}a{color:#c8a865}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies | TChess, DareClock and Chess Automation | Taha Ilyas</title>
+  <meta name="description" content="Product engineering case studies by Taha Ilyas: TChess native Stockfish module and subscriptions, DareClock with CameraX and ML Kit, and a chess content automation pipeline.">
+  <meta name="author" content="Taha Ilyas">
+
+  <meta property="og:title" content="Case Studies | TChess, DareClock and Chess Automation | Taha Ilyas">
+  <meta property="og:description" content="Product engineering case studies by Taha Ilyas: TChess native Stockfish module and subscriptions, DareClock with CameraX and ML Kit, and a chess content automation pipeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tahailyas.com/case-studies.html">
+  <meta property="og:image" content="https://tahailyas.com/images/og-image.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Case Studies | TChess, DareClock and Chess Automation | Taha Ilyas">
+  <meta name="twitter:description" content="Product engineering case studies by Taha Ilyas: TChess native Stockfish module and subscriptions, DareClock with CameraX and ML Kit, and a chess content automation pipeline.">
+  <meta name="twitter:image" content="https://tahailyas.com/images/og-image.jpg">
+
+  <link rel="canonical" href="https://tahailyas.com/case-studies.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261105">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Taha Ilyas",
+  "url": "https://tahailyas.com",
+  "publisher": {
+    "@id": "https://tahailyas.com/#person"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://tahailyas.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://tahailyas.com/case-studies.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
-  <p>This page has moved. Redirecting to <a href="/work-with-me.html#case-studies">Work With Me → Case Studies</a>…</p>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">TAHA ILYAS<span>.</span></a>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="ventures.html">Projects</a>
+        <a href="case-studies.html" class="active">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="assets/Taha_Ilyas_Resume.pdf" download>Resume</a>
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </div>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Case Studies</span>
+      <h1>Product engineering, in detail.</h1>
+      <p>Three projects, what was hard about each, and how it was built. Every number comes from the app stores, the repositories or the test runs.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+        <article class="case-study-card fade-in">
+          <div class="case-study-card__header">
+            <h3>TChess: chess training app with an on-device engine</h3>
+            <span class="case-study-card__tag">React Native · Expo · Next.js · Supabase</span>
+          </div>
+          <div class="case-study-card__body">
+            <p class="case-study-card__intro">A chess training app for Android and web, published on Google Play as app.tchess and on the web at tchess.app.</p>
+            <div class="case-study-card__grid">
+              <div class="case-study-card__section"><h4>Challenge</h4><p>Run a strong chess engine on a phone, keep it stable in production, and sell subscriptions across Google Play and the web without letting trials be abused.</p></div>
+              <div class="case-study-card__section"><h4>Native engine</h4><p>Stockfish 17.1 is integrated through a custom NDK/JNI native module. Production memory issues were traced through Sentry and fixed by correcting the engine lifecycle handling.</p></div>
+              <div class="case-study-card__section"><h4>Subscriptions and backend</h4><p>RevenueCat, Google Play Billing and Paddle, with 11 Supabase Edge Functions and 48 Postgres migrations with row-level security. The server-held trial survives reinstalls and device clock changes.</p></div>
+              <div class="case-study-card__section"><h4>Testing</h4><p>1,500+ automated test cases (817 in the app, 704 in the web project) plus an engine check that replays all 60,000 bundled puzzles.</p></div>
+            </div>
+            <div class="case-study-card__facts">
+              <div><span class="case-study-card__fact-num">1,000+</span><span class="case-study-card__fact-label">Play installs</span></div>
+              <div><span class="case-study-card__fact-num">4.8</span><span class="case-study-card__fact-label">Play rating</span></div>
+              <div><span class="case-study-card__fact-num">500+</span><span class="case-study-card__fact-label">Monthly active devices</span></div>
+              <div><span class="case-study-card__fact-num">1,500+</span><span class="case-study-card__fact-label">Automated tests</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="case-study-card fade-in">
+          <div class="case-study-card__header">
+            <h3>DareClock: an alarm that needs real exercise to stop</h3>
+            <span class="case-study-card__tag">Kotlin · Jetpack Compose · CameraX · ML Kit</span>
+          </div>
+          <div class="case-study-card__body">
+            <p class="case-study-card__intro">A native Android alarm that keeps ringing until a camera-verified exercise is complete, published on Google Play as com.dareclock.</p>
+            <div class="case-study-card__grid">
+              <div class="case-study-card__section"><h4>Challenge</h4><p>Make an alarm that cannot be dismissed lazily, yet stays reliable: it has to fire on time and survive reboots.</p></div>
+              <div class="case-study-card__section"><h4>Camera and ML</h4><p>CameraX feeds on-device ML Kit pose detection, which counts push-ups live.</p></div>
+              <div class="case-study-card__section"><h4>Alarm reliability</h4><p>Exact alarms, a foreground ringing service, boot recovery and an offline event queue, with Play Billing and RevenueCat for purchases.</p></div>
+              <div class="case-study-card__section"><h4>Testing and releases</h4><p>200 JUnit tests and 7 releases in 3 weeks, on Kotlin 2.2.</p></div>
+            </div>
+            <div class="case-study-card__facts">
+              <div><span class="case-study-card__fact-num">7</span><span class="case-study-card__fact-label">Releases</span></div>
+              <div><span class="case-study-card__fact-num">3 weeks</span><span class="case-study-card__fact-label">First commit to 7 releases</span></div>
+              <div><span class="case-study-card__fact-num">200</span><span class="case-study-card__fact-label">JUnit tests</span></div>
+              <div><span class="case-study-card__fact-num">2.2</span><span class="case-study-card__fact-label">Kotlin version</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="case-study-card fade-in">
+          <div class="case-study-card__header">
+            <h3>Chess content automation: a publishing pipeline</h3>
+            <span class="case-study-card__tag">Python · FFmpeg · Remotion · Playwright · Next.js</span>
+          </div>
+          <div class="case-study-card__body">
+            <p class="case-study-card__intro">A pipeline that renders narrated chess reels and publishes them to Instagram, YouTube, Facebook and TikTok on a schedule.</p>
+            <div class="case-study-card__grid">
+              <div class="case-study-card__section"><h4>Challenge</h4><p>A chess app needs a steady stream of short video, and doing it by hand does not scale past a few clips a week.</p></div>
+              <div class="case-study-card__section"><h4>Pipeline</h4><p>Python drives FFmpeg and Remotion to render each reel, and Playwright handles publishing. A Next.js control dashboard shows the queue and platform health.</p></div>
+              <div class="case-study-card__section"><h4>Reliability</h4><p>237 unit tests cover the pipeline, and every post is logged so failures can be traced.</p></div>
+              <div class="case-study-card__section"><h4>Output</h4><p>1,078 published posts logged across 73 days, with 480,000+ recorded plays.</p></div>
+            </div>
+            <div class="case-study-card__facts">
+              <div><span class="case-study-card__fact-num">1,078</span><span class="case-study-card__fact-label">Published posts</span></div>
+              <div><span class="case-study-card__fact-num">73</span><span class="case-study-card__fact-label">Posting days</span></div>
+              <div><span class="case-study-card__fact-num">480,000+</span><span class="case-study-card__fact-label">Recorded plays</span></div>
+              <div><span class="case-study-card__fact-num">237</span><span class="case-study-card__fact-label">Unit tests</span></div>
+            </div>
+          </div>
+        </article>
+    </div>
+  </section>
+
+  <section class="section section--alt cta-section">
+    <div class="container">
+      <div class="cta-section__inner fade-in">
+        <span class="section-label">Next Step</span>
+        <h2>Want the short version?</h2>
+        <p>The one-page resume covers the same work. I am open to remote roles.</p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="assets/Taha_Ilyas_Resume.pdf" class="btn btn--primary btn--lg" download>Download Resume</a>
+          <a href="contact.html" class="btn btn--outline btn--lg">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <p>© 2026 Taha Ilyas. React Native &amp; Full-Stack TypeScript Engineer.</p>
+        </div>
+        <div class="footer__links">
+          <a href="about.html">About</a>
+          <a href="ventures.html">Projects</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="assets/Taha_Ilyas_Resume.pdf" download>Resume</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://optivioautomation.com" target="_blank" rel="noopener">Optivio Automation</a>
+          <a href="https://github.com/realtahailyas" target="_blank" rel="me noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/tahailyas/" target="_blank" rel="me noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
