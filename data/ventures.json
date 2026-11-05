@@ -42,7 +42,7 @@
     "stack": ["React Native", "Expo SDK 54", "Supabase", "TypeScript", "AdMob"],
     "category": "mobile",
     "featured": true,
-    "order": 3
+    "order": 10
   },
   {
     "id": "dareclock",
@@ -57,7 +57,7 @@
     "stack": ["Kotlin", "Jetpack Compose", "CameraX", "ML Kit"],
     "category": "mobile",
     "featured": true,
-    "order": 4
+    "order": 3
   },
   {
     "id": "brickrush",
@@ -72,7 +72,7 @@
     "stack": ["Unity", "C#", "Google Play Games"],
     "category": "mobile",
     "featured": true,
-    "order": 5
+    "order": 4
   },
   {
     "id": "instagram-outreach-automation",
@@ -87,7 +87,7 @@
     "stack": ["SerpAPI", "Apify", "n8n", "Custom dashboard"],
     "category": "tool",
     "featured": true,
-    "order": 6
+    "order": 5
   },
   {
     "id": "optivio-chatbot",
@@ -102,7 +102,7 @@
     "stack": ["Next.js 14", "Supabase", "OpenAI GPT-4o-mini", "Polar.sh", "Vercel"],
     "category": "saas",
     "featured": true,
-    "order": 7
+    "order": 6
   },
   {
     "id": "optivio-automation",
@@ -117,7 +117,7 @@
     "stack": ["Retell AI", "Twilio", "n8n", "Next.js 14", "Brevo"],
     "category": "agency",
     "featured": true,
-    "order": 8
+    "order": 7
   },
   {
     "id": "optivio-media",
@@ -132,7 +132,7 @@
     "stack": ["Meta Ads", "CAPI", "Shopify", "GA4"],
     "category": "agency",
     "featured": true,
-    "order": 9,
+    "order": 8,
     "metrics": {
       "ad_spend": "$40k+",
       "purchases": "2,679",
@@ -153,6 +153,6 @@
     "stack": ["Static HTML", "Local SEO", "Google Business"],
     "category": "web",
     "featured": true,
-    "order": 10
+    "order": 9
   }
 ]
