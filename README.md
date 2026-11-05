@@ -1,6 +1,6 @@
 # tahailyas.com
 
-Personal site of **Taha Ilyas**, AI engineer and product builder: projects, services, writing and contact.
+Personal site of **Taha Ilyas**, React Native and full-stack TypeScript engineer, open to remote roles: projects, case studies, resume and contact.
 
 ![HTML5](https://img.shields.io/badge/HTML5-static-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-vanilla-1572B6?logo=css3&logoColor=white)
@@ -12,11 +12,10 @@ Live: https://tahailyas.com
 
 ## Features
 
-- **Projects showcase**: TChess, ChessReel, CertForge, Optivio Chatbot and more, with problem / what I built / result for each, and a category filter.
-- **Services page** with a fit check and booking CTA.
-- **Writing**: long-form articles on Meta Ads structure, CPA reduction and Pixel/CAPI setup.
-- **SEO**: inline JSON-LD (Person, WebSite, ItemList, Service, Article, BreadcrumbList, FAQPage), Open Graph and Twitter cards, hand-maintained `sitemap.xml` and `robots.txt`.
-- **Link equity kept through a rebrand**: old URLs (`/proof`, `/case-studies`, `/insights/*`) are meta-refresh + canonical stubs that point to the new pages.
+- **Projects showcase**: TChess, DareClock, Brick Breaker, chess content automation and more, with problem / what I built / result for each, and a category filter.
+- **Case studies** on TChess, DareClock and chess content automation, plus a one-page resume PDF (`assets/Taha_Ilyas_Resume.pdf`, phone number removed).
+- **SEO**: inline JSON-LD (Person, WebSite, ItemList, BreadcrumbList, FAQPage, ContactPage), Open Graph and Twitter cards, hand-maintained `sitemap.xml` and `robots.txt`.
+- **Link equity kept through a rebrand**: old URLs (`/proof`, `/insights/*`, `/writing*`, `/work-with-me`) are meta-refresh + canonical stubs that point to the new pages.
 - **No build step, no framework**: hand-written HTML, one stylesheet, one small vanilla JS file.
 
 ## Tech stack
@@ -40,17 +39,15 @@ Deploy: push to `main`; GitHub Pages serves the repo root.
 ```
 index.html            home
 ventures.html         projects (nav label "Projects")
-about.html            founder story
-work-with-me.html     services, plus #case-studies and #proof anchors
-writing.html          articles hub
-contact.html          booking, email, FAQ
-writing/              articles
-insights/ insights.html case-studies.html proof.html   redirect stubs (keep for SEO)
-data/ventures.json    project data
+case-studies.html     product engineering case studies
+about.html            experience, education, stack
+contact.html          email, LinkedIn, GitHub, resume, FAQ
+proof.html insights.html insights/ writing.html writing/ work-with-me.html   redirect stubs (keep for SEO)
+assets/               public resume PDF (no phone number)
+data/ventures.json    project data (keep in sync with the HTML cards)
 css/style.css         all styles
 js/main.js            nav, scroll animations, counters, project filter
-images/               screenshots and portrait
-docs/                 reference notes (schema links)
+images/               screenshots, app icons, portrait, OG image
 CNAME sitemap.xml robots.txt favicon.svg
 ```
 

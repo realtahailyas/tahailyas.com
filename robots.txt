@@ -2,5 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tahailyas.com/sitemap.xml
-
-# tahailyas.com — Founder building AI products & growth systems
